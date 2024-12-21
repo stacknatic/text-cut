@@ -1,5 +1,8 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.add = void 0;
-var utils_js_1 = require("./utils.js");
-Object.defineProperty(exports, "add", { enumerable: true, get: function () { return utils_js_1.add; } });
+exports.TextSnippet = void 0;
+var TextSnippet_1 = require("./components/TextSnippet");
+Object.defineProperty(exports, "TextSnippet", { enumerable: true, get: function () { return __importDefault(TextSnippet_1).default; } });

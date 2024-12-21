@@ -1,1 +1,2 @@
-export { add } from "./utils.js";
+
+export { default as TextSnippet } from './components/TextSnippet';

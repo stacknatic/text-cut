@@ -11,7 +11,7 @@ interface TruncatedPostProps {
   viewFullPostText?: string;
 }
 
-const TextSnippet: React.FC<TruncatedPostProps> = ({
+export default function TextSnippet({
   body,
   useLink,
   postLink,
@@ -19,7 +19,7 @@ const TextSnippet: React.FC<TruncatedPostProps> = ({
   viewMoreText,
   viewLessText,
   length,
-}) => {
+}: TruncatedPostProps){
   const [isExpanded, setIsExpanded] = useState(false);
 
   const {
@@ -79,5 +79,3 @@ const TextSnippet: React.FC<TruncatedPostProps> = ({
     </div>
   );
 };
-
-export default TextSnippet;

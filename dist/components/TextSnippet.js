@@ -1,5 +1,5 @@
-'use client';
 "use strict";
+'use client';
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -34,8 +34,9 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = TextSnippet;
 const react_1 = __importStar(require("react"));
-const TextSnippet = ({ body, useLink, postLink, viewFullPostText, viewMoreText, viewLessText, length, }) => {
+function TextSnippet({ body, useLink, postLink, viewFullPostText, viewMoreText, viewLessText, length, }) {
     const [isExpanded, setIsExpanded] = (0, react_1.useState)(false);
     const { formattedTruncatedBody, formattedRemainingBody, formattedFullPost, isLongPost, } = (0, react_1.useMemo)(() => {
         const words = body.split(' ');
@@ -55,5 +56,5 @@ const TextSnippet = ({ body, useLink, postLink, viewFullPostText, viewMoreText, 
         formattedTruncatedBody,
         isLongPost && !useLink && (react_1.default.createElement("button", { className: "text-sm hover:text-blue transform ease-in delay-75 hover:scale-105 border-1 border-green p-2 rounded-3xl my-2", onClick: toggleExpansion }, viewMoreText)),
         isLongPost && useLink && (react_1.default.createElement("a", { href: postLink, className: "text-sm hover:text-blue transform ease-in delay-75 hover:scale-105 border-1 border-green p-2 rounded-3xl my-2" }, viewFullPostText))))));
-};
-exports.default = TextSnippet;
+}
+;

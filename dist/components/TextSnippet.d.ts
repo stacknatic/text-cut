@@ -8,6 +8,5 @@ interface TruncatedPostProps {
     useLink?: boolean;
     viewFullPostText?: string;
 }
-declare const TextSnippet: React.FC<TruncatedPostProps>;
-export default TextSnippet;
-//# sourceMappingURL=TextSnippet.d.ts.map
+export default function TextSnippet({ body, useLink, postLink, viewFullPostText, viewMoreText, viewLessText, length, }: TruncatedPostProps): React.JSX.Element;
+export {};

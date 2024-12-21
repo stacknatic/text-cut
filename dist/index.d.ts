@@ -1,2 +1,1 @@
-export { add } from "./utils.js";
-//# sourceMappingURL=index.d.ts.map
+export { default as TextSnippet } from './components/TextSnippet';
