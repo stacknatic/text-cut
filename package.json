@@ -6,8 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "ci": "npm run build",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack .",
+    "lint": "tsc",
+    "ci": "npm run build && npm run check-format && npm run check-exports && npm run lint",
+    "prepublishOnly": "npm run ci",
+    "local-release": "changeset version && changeset publish"
   },
   "keywords": [],
   "homepage": "https://stacknatic.com",
@@ -26,6 +31,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.2",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "prettier": "^3.4.2",

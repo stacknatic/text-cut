@@ -11,7 +11,7 @@ interface TruncatedPostProps {
   viewFullPostText?: string;
 }
 
-export default function TextSnippet({
+const TextSnippet = ({
   body,
   useLink,
   postLink,
@@ -19,7 +19,7 @@ export default function TextSnippet({
   viewMoreText,
   viewLessText,
   length,
-}: TruncatedPostProps) {
+}: TruncatedPostProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const {
@@ -78,4 +78,6 @@ export default function TextSnippet({
       )}
     </div>
   );
-}
+};
+
+export default TextSnippet;
