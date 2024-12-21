@@ -27,3 +27,4 @@ To install the Text Truncator, run:
 
 ```bash
 npm install text-snippet
+```
