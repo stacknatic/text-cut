@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es6", // Specify ECMAScript target version
+    "skipLibCheck": true, // Skip type checking of all declaration files
+    "allowJs": false, // Allow JavaScript files to be compiled
+    "module": "Preserve", // Specify module code generation
+    "jsx": "react", // Specify JSX code generation
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "outDir": "dist", // Redirect output structure to the dist folder
+    "strict": true, // Enable all strict type checking options
+    "esModuleInterop": true, // Enables emit interoperability between CommonJS and ES Modules
+    "noUncheckedIndexedAccess": true, // Disallow unchecked indexed access to objects
+    "noImplicitOverride": false, // Ensure overriding members in derived classes are marked with an override modifier
+    "noEmit": true
+
+  },
+  "include": [
+    "src/**/*", // Include all TypeScript files in the src directory
+    "dist"
+  ],
+  "exclude": [
+    "node_modules", // Exclude node_modules directory
+    "dist" // Exclude the output directory
+  ]
+}
