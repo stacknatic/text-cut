@@ -1,4 +1,3 @@
-webpack.local.config.js
-    webpack.production.config.js
-    .eslintrc
-    .gitignore
+/tests
+/.env
+/docs

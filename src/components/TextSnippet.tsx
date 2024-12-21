@@ -19,7 +19,7 @@ export default function TextSnippet({
   viewMoreText,
   viewLessText,
   length,
-}: TruncatedPostProps){
+}: TruncatedPostProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const {
@@ -78,4 +78,4 @@ export default function TextSnippet({
       )}
     </div>
   );
-};
+}

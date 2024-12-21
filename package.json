@@ -5,7 +5,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "ci": "npm run build",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "homepage": "https://stacknatic.com",
@@ -16,12 +18,17 @@
     "type": "git",
     "url": "git+https://github.com/stacknatic/text-snippet.git"
   },
-  "author": "Michael akerele <michael@stacknatic.com> (https://stacknatic.com)",
-  "license": "ISC",
+  "author": "Michael akerele <hello@stacknatic.com> (https://stacknatic.com)",
+  "license": "MIT",
   "description": "",
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
   "devDependencies": {
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
+    "prettier": "^3.4.2",
     "typescript": "^5.7.2"
   }
 }

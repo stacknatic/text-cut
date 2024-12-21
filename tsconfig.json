@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es6",                     // Specify ECMAScript target version
-    "module": "commonjs",                // Specify module code generation
-    "jsx": "react",                       // Specify JSX code generation
-    "declaration": true,                  // Generate .d.ts files
-    "outDir": "dist",                    // Redirect output structure to the dist folder
-    "strict": true,                       // Enable all strict type checking options
-    "esModuleInterop": true ,              // Enables emit interoperability between CommonJS and ES Modules
-
+    "target": "es6", // Specify ECMAScript target version
+    "module": "commonjs", // Specify module code generation
+    "jsx": "react", // Specify JSX code generation
+    "declaration": true, // Generate .d.ts files
+    "outDir": "dist", // Redirect output structure to the dist folder
+    "strict": true, // Enable all strict type checking options
+    "esModuleInterop": true // Enables emit interoperability between CommonJS and ES Modules
   },
   "include": [
-    "src/**/*"                            // Include all TypeScript files in the src directory
-, "dist"  ],
+    "src/**/*", // Include all TypeScript files in the src directory
+    "dist"
+  ],
   "exclude": [
-    "node_modules",                       // Exclude node_modules directory
-    "dist"                                // Exclude the output directory
+    "node_modules", // Exclude node_modules directory
+    "dist" // Exclude the output directory
   ]
 }
