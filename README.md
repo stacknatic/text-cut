@@ -39,5 +39,5 @@ The text truncator takes the following props:
 To install, run:
 
 ```bash
-npm install text-snippet
+npm install text-cut
 ```
