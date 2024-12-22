@@ -1,46 +1,7 @@
-// {
-//   "compilerOptions": {
-//     /* Base Options: */
-//     "esModuleInterop": true,
-//     "skipLibCheck": true,
-//     "target": "es6",
-//     "module": "CommonJS",
-//     "allowJs": true,
-//     "jsx": "react",
-//     // "resolveJsonModule": true,
-//     "moduleDetection": "force",
-//     "isolatedModules": true,
-
-//     /* Strictness */
-//     "strict": true,
-//     "noUncheckedIndexedAccess": true,
-//     "noImplicitOverride": true,
-
-//     /* If transpiling with TypeScript: */
-//     // "module": "NodeNext",
-//     "outDir": "dist",
-//     // "rootDir": "src",
-//     // "sourceMap": true,
-
-//     /* AND if you're building for a library: */
-//     // "declaration": true,
-
-//     /* AND if you're building for a library in a monorepo: */
-//     // "declarationMap": true
-//   },
-//   "include": [
-//     "src/**/*", // Include all TypeScript files in the src directory
-//     "dist"
-//   ],
-//   "exclude": [
-//     "node_modules", // Exclude node_modules directory
-//     "dist" // Exclude the output directory
-//   ]
-// }
 {
   "compilerOptions": {
     "target": "es6", // Specify ECMAScript target version
-    "module": "commonjs", // Specify module code generation
+    "module": "NodeNext", // Specify module code generation
     "jsx": "react", // Specify JSX code generation
     "declaration": true, // Generate .d.ts files
     "outDir": "dist", // Redirect output structure to the dist folder

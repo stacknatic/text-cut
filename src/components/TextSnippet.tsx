@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useMemo } from 'react';
+import styles from '../styles.module.css'; // Import the CSS Module
 
 interface TextSnippetProps {
   body: string;
@@ -14,7 +15,7 @@ interface TextSnippetProps {
   buttonBR?: string;
 }
 
-const TruncatedPost: React.FC<TextSnippetProps> = ({
+const TextSnippet: React.FC<TextSnippetProps> = ({
   body,
   length,
   viewMoreText = 'View More',
@@ -52,7 +53,7 @@ const TruncatedPost: React.FC<TextSnippetProps> = ({
         <>
           <p>{fullText}</p>
           <button
-            className={`text-view-button ts-${bgColor}-bg ts-${textColor}-text ts-${buttonBR}-radius`}
+            className={`${styles.textViewButton} ${styles[`ts${bgColor.charAt(0).toUpperCase() + bgColor.slice(1)}Bg`]} ${styles[`ts${textColor.charAt(0).toUpperCase() + textColor.slice(1)}Text`]} ${styles[`ts${buttonBR.charAt(0).toUpperCase() + buttonBR.slice(1)}Radius`]}`}
             onClick={toggleExpansion}
           >
             {viewLessText}
@@ -60,10 +61,10 @@ const TruncatedPost: React.FC<TextSnippetProps> = ({
         </>
       ) : (
         <>
-          <p> {truncatedText} </p>
+          <p>{truncatedText}</p>
           {isLongText && !useLink && (
             <button
-              className={`text-view-button ts-${bgColor}-bg ts-${textColor}-text ts-${buttonBR}-radius`}
+              className={`${styles.textViewButton} ${styles[`ts${bgColor.charAt(0).toUpperCase() + bgColor.slice(1)}Bg`]} ${styles[`ts${textColor.charAt(0).toUpperCase() + textColor.slice(1)}Text`]} ${styles[`ts${buttonBR.charAt(0).toUpperCase() + buttonBR.slice(1)}Radius`]}`}
               onClick={toggleExpansion}
             >
               {viewMoreText}
@@ -74,7 +75,7 @@ const TruncatedPost: React.FC<TextSnippetProps> = ({
             <a
               href={postLink as string}
               target="_blank"
-              className="post-link-button"
+              className={styles.postLinkButton}
             >
               {viewFullPostText}
             </a>
@@ -85,4 +86,4 @@ const TruncatedPost: React.FC<TextSnippetProps> = ({
   );
 };
 
-export default TruncatedPost;
+export default TextSnippet;

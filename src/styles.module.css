@@ -1,4 +1,4 @@
-.text-view-button {
+.textViewButton {
   color: white;
   padding: 10px;
   margin: 10px 0;
@@ -8,17 +8,20 @@
   display: block;
   font-weight: bold;
 }
-.ts-small-radius {
+
+.tsSmallRadius {
   border-radius: 5px;
 }
-.ts-medium-radius {
+
+.tsMediumRadius {
   border-radius: 25px;
 }
-.button-bg-color {
+
+.buttonBgColor {
   background-color: #4caf50;
 }
 
-.post-link-button {
+.postLinkButton {
   background-color: #4caf50;
   border-radius: 5px;
   color: white;
@@ -30,68 +33,68 @@
   display: block;
 }
 
-.ts-red-bg {
+.tsRedBg {
   background-color: red;
 }
-.ts-blue-bg {
+.tsBlueBg {
   background-color: blue;
 }
-.ts-green-bg {
+.tsGreenBg {
   background-color: green;
 }
-.ts-yellow-bg {
+.tsYellowBg {
   background-color: yellow;
 }
-.ts-purple-bg {
+.tsPurpleBg {
   background-color: purple;
 }
-.ts-orange-bg {
+.tsOrangeBg {
   background-color: orange;
 }
-.ts-pink-bg {
+.tsPinkBg {
   background-color: pink;
 }
-.ts-black-bg {
+.tsBlackBg {
   background-color: black;
 }
-.ts-white-bg {
+.tsWhiteBg {
   background-color: white;
 }
-.ts-gray-bg {
+.tsGrayBg {
   background-color: gray;
 }
 
-.text-view-button:hover {
+.textViewButton:hover {
   background-color: gray;
 }
 
-.ts-red-text {
+.tsRedText {
   color: red;
 }
-.ts-blue-text {
+.tsBlueText {
   color: blue;
 }
-.ts-green-text {
+.tsGreenText {
   color: green;
 }
-.ts-yellow-text {
+.tsYellowText {
   color: yellow;
 }
-.ts-purple-text {
+.tsPurpleText {
   color: purple;
 }
-.ts-orange-text {
+.tsOrangeText {
   color: orange;
 }
-.ts-pink-text {
+.tsPinkText {
   color: pink;
 }
-.ts-black-text {
+.tsBlackText {
   color: black;
 }
-.ts-white-text {
+.tsWhiteText {
   color: white;
 }
-.ts-gray-text {
+.tsGrayText {
   color: gray;
 }

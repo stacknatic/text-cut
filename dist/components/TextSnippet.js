@@ -1,5 +1,5 @@
-"use strict";
 'use client';
+"use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -33,9 +33,13 @@ var __importStar = (this && this.__importStar) || (function () {
         return result;
     };
 })();
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
-const TruncatedPost = ({ body, length, viewMoreText = 'View More', viewLessText = 'View Less', useLink, postLink, viewFullPostText = 'View Full Post', bgColor = 'green', textColor = 'white', buttonBR = 'small', }) => {
+const styles_module_css_1 = __importDefault(require("../styles.module.css")); // Import the CSS Module
+const TextSnippet = ({ body, length, viewMoreText = 'View More', viewLessText = 'View Less', useLink, postLink, viewFullPostText = 'View Full Post', bgColor = 'green', textColor = 'white', buttonBR = 'small', }) => {
     const [isExpanded, setIsExpanded] = (0, react_1.useState)(false);
     const { truncatedText, notAboveLength, fullText, isLongText } = (0, react_1.useMemo)(() => {
         const words = body.split(' ');
@@ -51,12 +55,9 @@ const TruncatedPost = ({ body, length, viewMoreText = 'View More', viewLessText 
     const toggleExpansion = () => setIsExpanded(!isExpanded);
     return (react_1.default.createElement("div", null, notAboveLength ? (react_1.default.createElement("p", null, fullText)) : isExpanded ? (react_1.default.createElement(react_1.default.Fragment, null,
         react_1.default.createElement("p", null, fullText),
-        react_1.default.createElement("button", { className: `text-view-button ts-${bgColor}-bg ts-${textColor}-text ts-${buttonBR}-radius`, onClick: toggleExpansion }, viewLessText))) : (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("p", null,
-            " ",
-            truncatedText,
-            " "),
-        isLongText && !useLink && (react_1.default.createElement("button", { className: `text-view-button ts-${bgColor}-bg ts-${textColor}-text ts-${buttonBR}-radius`, onClick: toggleExpansion }, viewMoreText)),
-        isLongText && useLink && (react_1.default.createElement("a", { href: postLink, target: "_blank", className: "post-link-button" }, viewFullPostText))))));
+        react_1.default.createElement("button", { className: `${styles_module_css_1.default.textViewButton} ${styles_module_css_1.default[`ts${bgColor.charAt(0).toUpperCase() + bgColor.slice(1)}Bg`]} ${styles_module_css_1.default[`ts${textColor.charAt(0).toUpperCase() + textColor.slice(1)}Text`]} ${styles_module_css_1.default[`ts${buttonBR.charAt(0).toUpperCase() + buttonBR.slice(1)}Radius`]}`, onClick: toggleExpansion }, viewLessText))) : (react_1.default.createElement(react_1.default.Fragment, null,
+        react_1.default.createElement("p", null, truncatedText),
+        isLongText && !useLink && (react_1.default.createElement("button", { className: `${styles_module_css_1.default.textViewButton} ${styles_module_css_1.default[`ts${bgColor.charAt(0).toUpperCase() + bgColor.slice(1)}Bg`]} ${styles_module_css_1.default[`ts${textColor.charAt(0).toUpperCase() + textColor.slice(1)}Text`]} ${styles_module_css_1.default[`ts${buttonBR.charAt(0).toUpperCase() + buttonBR.slice(1)}Radius`]}`, onClick: toggleExpansion }, viewMoreText)),
+        isLongText && useLink && (react_1.default.createElement("a", { href: postLink, target: "_blank", className: styles_module_css_1.default.postLinkButton }, viewFullPostText))))));
 };
-exports.default = TruncatedPost;
+exports.default = TextSnippet;

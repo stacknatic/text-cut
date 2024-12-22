@@ -25,20 +25,19 @@
     "read more",
     "read less"
   ],
-  "homepage": "https://stacknatic.com",
   "bugs": {
     "url": "https://github.com/stacknatic/text-snippet/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stacknatic/text-snippet.git"
+    "url": "https://github.com/stacknatic/text-snippet.git"
   },
-  "author": "Michael akerele <hello@stacknatic.com> (https://stacknatic.com)",
+  "author": "Michael akerele <hello@stacknatic.com> (https://stacknatic.com/profile/full-stack-developer)",
   "license": "MIT",
   "description": "",
   "peerDependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.2",

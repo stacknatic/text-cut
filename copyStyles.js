@@ -2,8 +2,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const src = path.join(__dirname, 'src', 'styles.css'); // Path to the source styles file
-const dest = path.join(__dirname, 'dist', 'styles.css'); // Path to the destination
+const src = path.join(__dirname, 'src', 'styles.module.css'); // Path to the source styles file
+const dest = path.join(__dirname, 'dist', 'styles.module.css'); // Path to the destination
 
 fs.copyFile(src, dest, (err) => {
   if (err) {

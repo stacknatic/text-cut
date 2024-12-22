@@ -11,5 +11,5 @@ interface TextSnippetProps {
     textColor?: string;
     buttonBR?: string;
 }
-declare const TruncatedPost: React.FC<TextSnippetProps>;
-export default TruncatedPost;
+declare const TextSnippet: React.FC<TextSnippetProps>;
+export default TextSnippet;
