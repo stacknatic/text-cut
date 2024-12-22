@@ -1,5 +1,11 @@
 # text-snippet
 
+## 1.0.3
+
+### Patch Changes
+
+- 36e5b9f: Initial release
+
 ## 1.0.2
 
 ### Patch Changes
