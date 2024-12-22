@@ -53,10 +53,10 @@ const TextSnippet = ({ body, length, viewMoreText = 'View More', viewLessText = 
         };
     }, [body, length]);
     const toggleExpansion = () => setIsExpanded(!isExpanded);
-    return (react_1.default.createElement("div", null, notAboveLength ? (react_1.default.createElement("p", null, fullText)) : isExpanded ? (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("p", null, fullText),
+    return (react_1.default.createElement("div", null, notAboveLength ? (react_1.default.createElement("div", null, fullText)) : isExpanded ? (react_1.default.createElement(react_1.default.Fragment, null,
+        react_1.default.createElement("div", null, fullText),
         react_1.default.createElement("button", { className: `${styles_module_css_1.default.textViewButton} ${styles_module_css_1.default[`ts${bgColor.charAt(0).toUpperCase() + bgColor.slice(1)}Bg`]} ${styles_module_css_1.default[`ts${textColor.charAt(0).toUpperCase() + textColor.slice(1)}Text`]} ${styles_module_css_1.default[`ts${buttonBR.charAt(0).toUpperCase() + buttonBR.slice(1)}Radius`]}`, onClick: toggleExpansion }, viewLessText))) : (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("p", null, truncatedText),
+        react_1.default.createElement("div", null, truncatedText),
         isLongText && !useLink && (react_1.default.createElement("button", { className: `${styles_module_css_1.default.textViewButton} ${styles_module_css_1.default[`ts${bgColor.charAt(0).toUpperCase() + bgColor.slice(1)}Bg`]} ${styles_module_css_1.default[`ts${textColor.charAt(0).toUpperCase() + textColor.slice(1)}Text`]} ${styles_module_css_1.default[`ts${buttonBR.charAt(0).toUpperCase() + buttonBR.slice(1)}Radius`]}`, onClick: toggleExpansion }, viewMoreText)),
         isLongText && useLink && (react_1.default.createElement("a", { href: postLink, target: "_blank", className: styles_module_css_1.default.postLinkButton }, viewFullPostText))))));
 };

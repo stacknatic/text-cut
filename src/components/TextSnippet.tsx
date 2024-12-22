@@ -48,10 +48,10 @@ const TextSnippet: React.FC<TextSnippetProps> = ({
   return (
     <div>
       {notAboveLength ? (
-        <p>{fullText}</p>
+        <div>{fullText}</div>
       ) : isExpanded ? (
         <>
-          <p>{fullText}</p>
+          <div>{fullText}</div>
           <button
             className={`${styles.textViewButton} ${styles[`ts${bgColor.charAt(0).toUpperCase() + bgColor.slice(1)}Bg`]} ${styles[`ts${textColor.charAt(0).toUpperCase() + textColor.slice(1)}Text`]} ${styles[`ts${buttonBR.charAt(0).toUpperCase() + buttonBR.slice(1)}Radius`]}`}
             onClick={toggleExpansion}
@@ -61,7 +61,7 @@ const TextSnippet: React.FC<TextSnippetProps> = ({
         </>
       ) : (
         <>
-          <p>{truncatedText}</p>
+          <div>{truncatedText}</div>
           {isLongText && !useLink && (
             <button
               className={`${styles.textViewButton} ${styles[`ts${bgColor.charAt(0).toUpperCase() + bgColor.slice(1)}Bg`]} ${styles[`ts${textColor.charAt(0).toUpperCase() + textColor.slice(1)}Text`]} ${styles[`ts${buttonBR.charAt(0).toUpperCase() + buttonBR.slice(1)}Radius`]}`}
