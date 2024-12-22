@@ -1,1 +1,2 @@
-export { default as TextSnippet } from './components/TextSnippet';
+import TextSnippet from './components/TextSnippet';
+export { TextSnippet };
