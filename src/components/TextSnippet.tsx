@@ -1,5 +1,8 @@
-'use client';
+"use client";
 import React, { useState, useMemo } from 'react';
+
+
+
 
 interface TruncatedPostProps {
   body: string;
@@ -9,70 +12,64 @@ interface TruncatedPostProps {
   postLink?: string;
   useLink?: boolean;
   viewFullPostText?: string;
+  bgColor?: string;
 }
 
-const TextSnippet = ({
-  body,
-  useLink,
-  postLink,
-  viewFullPostText,
-  viewMoreText,
-  viewLessText,
-  length,
-}: TruncatedPostProps) => {
+
+const TruncatedPost: React.FC<TruncatedPostProps> = ({ body, useLink, postLink, viewFullPostText, viewMoreText="View More", viewLessText="View Less", length, bgColor="green" }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const {
-    formattedTruncatedBody,
-    formattedRemainingBody,
-    formattedFullPost,
-    isLongPost,
-  } = useMemo(() => {
+  const { truncatedText, notAboveLength, fullText, isLongText } = useMemo(() => {
     const words = body.split(' ');
     const truncatedBody = words.slice(0, length).join(' ');
     const remainingBody = words.slice(length).join(' ');
 
     return {
-      formattedTruncatedBody:
-        truncatedBody + (words.length > length ? '...' : ''),
-      formattedRemainingBody: remainingBody,
-      formattedFullPost: body,
-      isLongPost: words.length > length,
+      truncatedText: truncatedBody + (words.length > length ? ' ...' : ''),
+      fullText: body,
+      isLongText: words.length > length,
+      notAboveLength: words.length <= length,
+
     };
   }, [body, length]);
 
   const toggleExpansion = () => setIsExpanded(!isExpanded);
 
+    
+
   return (
     <div>
-      {isExpanded ? (
+      {notAboveLength ? fullText : 
+
+      isExpanded ? (
         <>
-          {formattedFullPost}
-          <button
-            className="text-sm hover:text-blue transform ease-in delay-75 hover:scale-105 border-1 border-green p-2 rounded-3xl my-2"
-            onClick={toggleExpansion}
-          >
-            {viewLessText}
-          </button>
+          {fullText}
+            <button
+              className={`text-view-button ${bgColor}`}
+              onClick={toggleExpansion}
+            >
+              {viewLessText}
+            </button>
+          
         </>
       ) : (
         <>
-          {formattedTruncatedBody}
-          {isLongPost && !useLink && (
+          {truncatedText}
+        {isLongText && !useLink &&(
             <button
-              className="text-sm hover:text-blue transform ease-in delay-75 hover:scale-105 border-1 border-green p-2 rounded-3xl my-2"
+              className={`text-view-button ${bgColor}`}
+
               onClick={toggleExpansion}
             >
               {viewMoreText}
             </button>
           )}
-          {isLongPost && useLink && (
-            <a
-              href={postLink as string}
-              className="text-sm hover:text-blue transform ease-in delay-75 hover:scale-105 border-1 border-green p-2 rounded-3xl my-2"
-            >
-              {viewFullPostText}
+          
+          {isLongText && useLink && (
+            <a href={postLink as string} className="post-link-button">
+                {viewFullPostText}
             </a>
+              
           )}
         </>
       )}
@@ -80,4 +77,4 @@ const TextSnippet = ({
   );
 };
 
-export default TextSnippet;
+export default TruncatedPost;

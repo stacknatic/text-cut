@@ -7,6 +7,7 @@ interface TruncatedPostProps {
     postLink?: string;
     useLink?: boolean;
     viewFullPostText?: string;
+    bgColor?: string;
 }
-declare const TextSnippet: ({ body, useLink, postLink, viewFullPostText, viewMoreText, viewLessText, length, }: TruncatedPostProps) => React.JSX.Element;
-export default TextSnippet;
+declare const TruncatedPost: React.FC<TruncatedPostProps>;
+export default TruncatedPost;

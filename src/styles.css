@@ -1,0 +1,78 @@
+.text-view-button{
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+}
+.button-bg-color{
+    background-color: #4CAF50;
+}
+
+
+
+.post-link-button{
+    background-color: #4CAF50;
+    border-radius: 5px;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* enum Colors {
+    Red = 'red',
+    Blue = 'blue',
+    Green = 'green',
+    Yellow = 'yellow',
+    Purple = 'purple',
+    Orange = 'orange',
+    Pink = 'pink',
+    Black = 'black',
+    White = 'white',
+    Gray = 'gray',
+  } */
+
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.purple{
+    background-color: purple;
+}
+.orange{
+    background-color: orange;
+}
+.pink{
+    background-color: pink;
+}
+.black{
+    background-color: black;
+}
+.white{
+    background-color: white;
+}
+.gray{
+    background-color: gray;
+}
+
+
+/* gray gring on text-view-button hover */
+.text-view-button:hover{
+    background-color: gray;
+}
+
+
+
