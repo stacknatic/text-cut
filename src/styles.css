@@ -2,10 +2,11 @@
     border-radius: 5px;
     color: white;
     padding: 10px;
-    margin: 8px;
+    margin: 10px 0;
     border: none;
     cursor: pointer;
-    width: auto;
+    width: fit-content;
+    display: block;
 }
 .button-bg-color{
     background-color: #4CAF50;
@@ -17,11 +18,13 @@
     background-color: #4CAF50;
     border-radius: 5px;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 10px;
+    margin: 10px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: fit-content;
+    display: block;
+
 }
 
 /* enum Colors {

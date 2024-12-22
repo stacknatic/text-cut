@@ -16,7 +16,7 @@ interface TruncatedPostProps {
 }
 
 
-const TruncatedPost: React.FC<TruncatedPostProps> = ({ body, useLink, postLink, viewFullPostText, viewMoreText="View More", viewLessText="View Less", length, bgColor="green" }) => {
+const TruncatedPost: React.FC<TruncatedPostProps> = ({ body, useLink, postLink, viewFullPostText="View Full Post", viewMoreText="View More", viewLessText="View Less", length, bgColor="green" }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const { truncatedText, notAboveLength, fullText, isLongText } = useMemo(() => {
@@ -39,11 +39,13 @@ const TruncatedPost: React.FC<TruncatedPostProps> = ({ body, useLink, postLink, 
 
   return (
     <div>
-      {notAboveLength ? fullText : 
+      {notAboveLength ? <p>{fullText}</p> : 
 
       isExpanded ? (
         <>
+        <p>
           {fullText}
+        </p>
             <button
               className={`text-view-button ${bgColor}`}
               onClick={toggleExpansion}
@@ -54,7 +56,7 @@ const TruncatedPost: React.FC<TruncatedPostProps> = ({ body, useLink, postLink, 
         </>
       ) : (
         <>
-          {truncatedText}
+         <p> {truncatedText} </p>
         {isLongText && !useLink &&(
             <button
               className={`text-view-button ${bgColor}`}
