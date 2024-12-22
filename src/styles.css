@@ -1,81 +1,97 @@
-.text-view-button{
-    border-radius: 5px;
-    color: white;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    cursor: pointer;
-    width: fit-content;
-    display: block;
+.text-view-button {
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  display: block;
+  font-weight: bold;
 }
-.button-bg-color{
-    background-color: #4CAF50;
+.ts-small-radius {
+  border-radius: 5px;
 }
-
-
-
-.post-link-button{
-    background-color: #4CAF50;
-    border-radius: 5px;
-    color: white;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    cursor: pointer;
-    width: fit-content;
-    display: block;
-
+.ts-medium-radius {
+  border-radius: 25px;
+}
+.button-bg-color {
+  background-color: #4caf50;
 }
 
-/* enum Colors {
-    Red = 'red',
-    Blue = 'blue',
-    Green = 'green',
-    Yellow = 'yellow',
-    Purple = 'purple',
-    Orange = 'orange',
-    Pink = 'pink',
-    Black = 'black',
-    White = 'white',
-    Gray = 'gray',
-  } */
-
-.red{
-    background-color: red;
-}
-.blue{
-    background-color: blue;
-}
-.green{
-    background-color: green;
-}
-.yellow{
-    background-color: yellow;
-}
-.purple{
-    background-color: purple;
-}
-.orange{
-    background-color: orange;
-}
-.pink{
-    background-color: pink;
-}
-.black{
-    background-color: black;
-}
-.white{
-    background-color: white;
-}
-.gray{
-    background-color: gray;
+.post-link-button {
+  background-color: #4caf50;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  display: block;
 }
 
-
-/* gray gring on text-view-button hover */
-.text-view-button:hover{
-    background-color: gray;
+.ts-red-bg {
+  background-color: red;
+}
+.ts-blue-bg {
+  background-color: blue;
+}
+.ts-green-bg {
+  background-color: green;
+}
+.ts-yellow-bg {
+  background-color: yellow;
+}
+.ts-purple-bg {
+  background-color: purple;
+}
+.ts-orange-bg {
+  background-color: orange;
+}
+.ts-pink-bg {
+  background-color: pink;
+}
+.ts-black-bg {
+  background-color: black;
+}
+.ts-white-bg {
+  background-color: white;
+}
+.ts-gray-bg {
+  background-color: gray;
 }
 
+.text-view-button:hover {
+  background-color: gray;
+}
 
-
+.ts-red-text {
+  color: red;
+}
+.ts-blue-text {
+  color: blue;
+}
+.ts-green-text {
+  color: green;
+}
+.ts-yellow-text {
+  color: yellow;
+}
+.ts-purple-text {
+  color: purple;
+}
+.ts-orange-text {
+  color: orange;
+}
+.ts-pink-text {
+  color: pink;
+}
+.ts-black-text {
+  color: black;
+}
+.ts-white-text {
+  color: white;
+}
+.ts-gray-text {
+  color: gray;
+}

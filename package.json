@@ -5,7 +5,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && node copyStyles.ts",
+    "build": "tsc && node copyStyles.js",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "check-exports": "attw --pack .",
@@ -14,7 +14,17 @@
     "prepublishOnly": "npm run ci",
     "local-release": "changeset version && changeset publish"
   },
-  "keywords": [],
+  "keywords": [
+    "text truncator",
+    "words truncator",
+    "text snippet",
+    "words snippet",
+    "text ellipsis",
+    "truncate text",
+    "shorten text",
+    "read more",
+    "read less"
+  ],
   "homepage": "https://stacknatic.com",
   "bugs": {
     "url": "https://github.com/stacknatic/text-snippet/issues"

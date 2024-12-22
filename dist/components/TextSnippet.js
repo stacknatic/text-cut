@@ -1,5 +1,5 @@
 "use strict";
-"use client";
+'use client';
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -35,7 +35,7 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
-const TruncatedPost = ({ body, useLink, postLink, viewFullPostText = "View Full Post", viewMoreText = "View More", viewLessText = "View Less", length, bgColor = "green" }) => {
+const TruncatedPost = ({ body, length, viewMoreText = 'View More', viewLessText = 'View Less', useLink, postLink, viewFullPostText = 'View Full Post', bgColor = 'green', textColor = 'white', buttonBR = 'small', }) => {
     const [isExpanded, setIsExpanded] = (0, react_1.useState)(false);
     const { truncatedText, notAboveLength, fullText, isLongText } = (0, react_1.useMemo)(() => {
         const words = body.split(' ');
@@ -49,15 +49,14 @@ const TruncatedPost = ({ body, useLink, postLink, viewFullPostText = "View Full 
         };
     }, [body, length]);
     const toggleExpansion = () => setIsExpanded(!isExpanded);
-    return (react_1.default.createElement("div", null, notAboveLength ? react_1.default.createElement("p", null, fullText) :
-        isExpanded ? (react_1.default.createElement(react_1.default.Fragment, null,
-            react_1.default.createElement("p", null, fullText),
-            react_1.default.createElement("button", { className: `text-view-button ${bgColor}`, onClick: toggleExpansion }, viewLessText))) : (react_1.default.createElement(react_1.default.Fragment, null,
-            react_1.default.createElement("p", null,
-                " ",
-                truncatedText,
-                " "),
-            isLongText && !useLink && (react_1.default.createElement("button", { className: `text-view-button ${bgColor}`, onClick: toggleExpansion }, viewMoreText)),
-            isLongText && useLink && (react_1.default.createElement("a", { href: postLink, className: "post-link-button" }, viewFullPostText))))));
+    return (react_1.default.createElement("div", null, notAboveLength ? (react_1.default.createElement("p", null, fullText)) : isExpanded ? (react_1.default.createElement(react_1.default.Fragment, null,
+        react_1.default.createElement("p", null, fullText),
+        react_1.default.createElement("button", { className: `text-view-button ts-${bgColor}-bg ts-${textColor}-text ts-${buttonBR}-radius`, onClick: toggleExpansion }, viewLessText))) : (react_1.default.createElement(react_1.default.Fragment, null,
+        react_1.default.createElement("p", null,
+            " ",
+            truncatedText,
+            " "),
+        isLongText && !useLink && (react_1.default.createElement("button", { className: `text-view-button ts-${bgColor}-bg ts-${textColor}-text ts-${buttonBR}-radius`, onClick: toggleExpansion }, viewMoreText)),
+        isLongText && useLink && (react_1.default.createElement("a", { href: postLink, target: "_blank", className: "post-link-button" }, viewFullPostText))))));
 };
 exports.default = TruncatedPost;
