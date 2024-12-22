@@ -1,0 +1,100 @@
+.textViewButton {
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  display: block;
+  font-weight: bold;
+}
+
+.tsSmallRadius {
+  border-radius: 5px;
+}
+
+.tsMediumRadius {
+  border-radius: 25px;
+}
+
+.buttonBgColor {
+  background-color: #4caf50;
+}
+
+.postLinkButton {
+  background-color: #4caf50;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  display: block;
+}
+
+.tsRedBg {
+  background-color: red;
+}
+.tsBlueBg {
+  background-color: blue;
+}
+.tsGreenBg {
+  background-color: green;
+}
+.tsYellowBg {
+  background-color: yellow;
+}
+.tsPurpleBg {
+  background-color: purple;
+}
+.tsOrangeBg {
+  background-color: orange;
+}
+.tsPinkBg {
+  background-color: pink;
+}
+.tsBlackBg {
+  background-color: black;
+}
+.tsWhiteBg {
+  background-color: white;
+}
+.tsGrayBg {
+  background-color: gray;
+}
+
+.textViewButton:hover {
+  background-color: gray;
+}
+
+.tsRedText {
+  color: red;
+}
+.tsBlueText {
+  color: blue;
+}
+.tsGreenText {
+  color: green;
+}
+.tsYellowText {
+  color: yellow;
+}
+.tsPurpleText {
+  color: purple;
+}
+.tsOrangeText {
+  color: orange;
+}
+.tsPinkText {
+  color: pink;
+}
+.tsBlackText {
+  color: black;
+}
+.tsWhiteText {
+  color: white;
+}
+.tsGrayText {
+  color: gray;
+}

@@ -1,55 +1,59 @@
 'use client';
 import React, { useState, useMemo } from 'react';
+import styles from '../styles.module.css'; // Import the CSS Module
 
-interface TruncatedPostProps {
+interface TextSnippetProps {
   body: string;
+  length: number;
   viewMoreText?: string;
   viewLessText?: string;
-  length: number;
-  postLink?: string;
   useLink?: boolean;
+  postLink?: string;
   viewFullPostText?: string;
+  bgColor?: string;
+  textColor?: string;
+  buttonBR?: string;
 }
 
-export default function TextSnippet({
+const TextSnippet: React.FC<TextSnippetProps> = ({
   body,
+  length,
+  viewMoreText = 'View More',
+  viewLessText = 'View Less',
   useLink,
   postLink,
-  viewFullPostText,
-  viewMoreText,
-  viewLessText,
-  length,
-}: TruncatedPostProps) {
+  viewFullPostText = 'View Full Post',
+  bgColor = 'green',
+  textColor = 'white',
+  buttonBR = 'small',
+}) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const {
-    formattedTruncatedBody,
-    formattedRemainingBody,
-    formattedFullPost,
-    isLongPost,
-  } = useMemo(() => {
-    const words = body.split(' ');
-    const truncatedBody = words.slice(0, length).join(' ');
-    const remainingBody = words.slice(length).join(' ');
+  const { truncatedText, notAboveLength, fullText, isLongText } =
+    useMemo(() => {
+      const words = body.split(' ');
+      const truncatedBody = words.slice(0, length).join(' ');
+      const remainingBody = words.slice(length).join(' ');
 
-    return {
-      formattedTruncatedBody:
-        truncatedBody + (words.length > length ? '...' : ''),
-      formattedRemainingBody: remainingBody,
-      formattedFullPost: body,
-      isLongPost: words.length > length,
-    };
-  }, [body, length]);
+      return {
+        truncatedText: truncatedBody + (words.length > length ? ' ...' : ''),
+        fullText: body,
+        isLongText: words.length > length,
+        notAboveLength: words.length <= length,
+      };
+    }, [body, length]);
 
   const toggleExpansion = () => setIsExpanded(!isExpanded);
 
   return (
     <div>
-      {isExpanded ? (
+      {notAboveLength ? (
+        <div>{fullText}</div>
+      ) : isExpanded ? (
         <>
-          {formattedFullPost}
+          <div>{fullText}</div>
           <button
-            className="text-sm hover:text-blue transform ease-in delay-75 hover:scale-105 border-1 border-green p-2 rounded-3xl my-2"
+            className={`${styles.textViewButton} ${styles[`ts${bgColor.charAt(0).toUpperCase() + bgColor.slice(1)}Bg`]} ${styles[`ts${textColor.charAt(0).toUpperCase() + textColor.slice(1)}Text`]} ${styles[`ts${buttonBR.charAt(0).toUpperCase() + buttonBR.slice(1)}Radius`]}`}
             onClick={toggleExpansion}
           >
             {viewLessText}
@@ -57,19 +61,21 @@ export default function TextSnippet({
         </>
       ) : (
         <>
-          {formattedTruncatedBody}
-          {isLongPost && !useLink && (
+          <div>{truncatedText}</div>
+          {isLongText && !useLink && (
             <button
-              className="text-sm hover:text-blue transform ease-in delay-75 hover:scale-105 border-1 border-green p-2 rounded-3xl my-2"
+              className={`${styles.textViewButton} ${styles[`ts${bgColor.charAt(0).toUpperCase() + bgColor.slice(1)}Bg`]} ${styles[`ts${textColor.charAt(0).toUpperCase() + textColor.slice(1)}Text`]} ${styles[`ts${buttonBR.charAt(0).toUpperCase() + buttonBR.slice(1)}Radius`]}`}
               onClick={toggleExpansion}
             >
               {viewMoreText}
             </button>
           )}
-          {isLongPost && useLink && (
+
+          {isLongText && useLink && (
             <a
               href={postLink as string}
-              className="text-sm hover:text-blue transform ease-in delay-75 hover:scale-105 border-1 border-green p-2 rounded-3xl my-2"
+              target="_blank"
+              className={styles.postLinkButton}
             >
               {viewFullPostText}
             </a>
@@ -78,4 +84,6 @@ export default function TextSnippet({
       )}
     </div>
   );
-}
+};
+
+export default TextSnippet;

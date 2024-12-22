@@ -1,12 +1,15 @@
 import React from 'react';
-interface TruncatedPostProps {
+interface TextSnippetProps {
     body: string;
+    length: number;
     viewMoreText?: string;
     viewLessText?: string;
-    length: number;
-    postLink?: string;
     useLink?: boolean;
+    postLink?: string;
     viewFullPostText?: string;
+    bgColor?: string;
+    textColor?: string;
+    buttonBR?: string;
 }
-export default function TextSnippet({ body, useLink, postLink, viewFullPostText, viewMoreText, viewLessText, length, }: TruncatedPostProps): React.JSX.Element;
-export {};
+declare const TextSnippet: React.FC<TextSnippetProps>;
+export default TextSnippet;
