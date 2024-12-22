@@ -26,11 +26,11 @@
     "read less"
   ],
   "bugs": {
-    "url": "https://github.com/stacknatic/text-snippet/issues"
+    "url": "https://github.com/stacknatic/text-cut/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/stacknatic/text-snippet.git"
+    "url": "https://github.com/stacknatic/text-cut.git"
   },
   "author": "Michael akerele <hello@stacknatic.com> (https://stacknatic.com/profile/full-stack-developer)",
   "license": "MIT",
