@@ -2,7 +2,7 @@
 import React, { useState, useMemo } from 'react';
 import styles from '../styles.module.css'; // Import the CSS Module
 
-interface TextSnippetProps {
+interface TextCutProps {
   body: string;
   length: number;
   viewMoreText?: string;
@@ -15,7 +15,7 @@ interface TextSnippetProps {
   buttonBR?: string;
 }
 
-const TextSnippet: React.FC<TextSnippetProps> = ({
+const TextCut: React.FC<TextCutProps> = ({
   body,
   length,
   viewMoreText = 'View More',
@@ -86,4 +86,4 @@ const TextSnippet: React.FC<TextSnippetProps> = ({
   );
 };
 
-export default TextSnippet;
+export default TextCut;

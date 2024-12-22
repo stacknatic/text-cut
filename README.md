@@ -1,6 +1,6 @@
 # Description
 
-Text-snippet is a simple text truncator that limits the display of text based on a maximum set length for words. When the text exceeds this length, a reader can toggle the text expansion button to view the full content or less.
+Text-cut is a simple text truncator that limits the display of text based on a maximum set length for words. When the text exceeds this length, a reader can toggle the text expansion button to view the full text or less.
 
 ## Features
 

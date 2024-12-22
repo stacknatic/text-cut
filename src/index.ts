@@ -1,2 +1,2 @@
-import TextSnippet from './components/TextSnippet';
-export { TextSnippet };
+import TextCut from './components/TextCut';
+export { TextCut };
