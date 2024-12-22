@@ -1,7 +1,7 @@
 # text-snippet
 
-## 1.0.5
+## 1.0.1
 
 ### Patch Changes
 
-- 5d6a2c5: Initial release
+- 3539e31: Initial release
