@@ -1,6 +1,6 @@
 # Description
 
-Text-cut is a simple text truncator that limits the display of text based on a maximum set length for words. When the text exceeds this length, a reader can toggle the text expansion button to view the full text or less.
+Text-cut is a simple React text truncator that limits the display of text based on a maximum set length for words. When the text exceeds this length, a reader can toggle the text expansion button to view the full text or less.
 
 ## Features
 
@@ -51,8 +51,6 @@ npm install text-cut
 ### Below is an example of how to use TextCut in a React application with TypeScript (requires React version ^18 or ^19).
 
 ```typescript
-"use client";
-
 import React from 'react';
 import { TextCut } from 'text-cut';
 
