@@ -3,6 +3,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TextSnippet = void 0;
-const TextSnippet_1 = __importDefault(require("./components/TextSnippet"));
-exports.TextSnippet = TextSnippet_1.default;
+exports.TextCut = void 0;
+const TextCut_1 = __importDefault(require("./components/TextCut"));
+exports.TextCut = TextCut_1.default;

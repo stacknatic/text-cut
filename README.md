@@ -45,3 +45,26 @@ To install, run:
 ```bash
 npm install text-cut
 ```
+
+## Sample Usage
+
+Below is an example of how to use the `TextCut` component from the `text-cut` library in a React application with TypeScript.
+
+```typescript
+"use client";
+
+import React from 'react';
+import { TextCut } from 'text-cut';
+
+export default function Page() {
+    const text: string = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum maxime, nobis repellendus nesciunt eius perferendis fugit laborum quam non laudantium iusto temporibus doloribus animi quae vero modi maiores deleniti dicta necessitatibus molestiae! Iure, in dignissimos fugit neque quaerat voluptate reiciendis saepe eaque perferendis? Mollitia, excepturi! Quaerat illo veniam ipsum, natus alias rerum tempore dolore est esse voluptatem dolorem. Recusandae natus ex tenetur consequatur ab quaerat deserunt temporibus sit veritatis esse iure tempora perspiciatis cum accusamus quam consequuntur, sequi nihil minus porro eum fugit laborum dolores, velit quos. Voluptatibus fugit excepturi ipsum commodi sapiente tempora hic eaque quae id aspernatur vel iure possimus omnis dolores facilis quos illum voluptatum architecto libero quis ipsa, fugiat dolorem incidunt sequi.";
+
+    return (
+        <div className='mx-auto max-w-[97%]'>
+            <h1 className='text-xl md:text-2xl mb-3'>Demo text snippet</h1>
+            <div className="p-4 bg-gray-100 text-black">
+                <TextCut body={text} length={10} bgColor="blue" />
+            </div>
+        </div>
+    );
+}
