@@ -48,7 +48,7 @@ npm install text-cut
 
 ## Sample Usage
 
-Below is an example of how to use the `TextCut` component from the `text-cut` library in a React application with TypeScript.
+### Below is an example of how to use TextCut in a React application with TypeScript (requires React version ^18 or ^19).
 
 ```typescript
 "use client";
