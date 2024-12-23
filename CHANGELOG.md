@@ -1,5 +1,11 @@
 # text-cut
 
+## 1.0.4
+
+### Patch Changes
+
+- d223b7d: Add screenshot
+
 ## 1.0.3
 
 ### Patch Changes
