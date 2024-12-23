@@ -28,11 +28,15 @@ The text truncator takes the following props:
 
 - `viewFullPostText` (string, optional): Custom text for linking to view the full post.
 
-- `bgColor` (string, optional): Sets background color for the text snippet expansion (View more or less) button, eg "green". Default is "blue".
+- `bgColor` (string, optional): Sets background color for the text snippet expansion (View more or less) button, eg "green". Default is "green".
 
 - `textColor` (string, optional): Sets text color for the text displayed in the button (view more or less), eg "blue".
 
 - `buttonBR` (string, optional): Sets border radius for buttons. Options are "small" (border radius of 5px) and "medium" (border radius of 25px). Default is "small".
+
+## Screenshot
+
+![Text-cut Screenshot](src/images/text_cut.jpeg)
 
 ## Installation
 
