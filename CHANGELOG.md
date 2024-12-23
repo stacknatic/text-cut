@@ -1,5 +1,11 @@
 # text-cut
 
+## 1.0.7
+
+### Patch Changes
+
+- 0d55bc0: Update README
+
 ## 1.0.6
 
 ### Patch Changes
