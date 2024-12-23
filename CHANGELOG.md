@@ -1,5 +1,11 @@
 # text-cut
 
+## 1.0.5
+
+### Patch Changes
+
+- cdd5a0c: Update README with usage sample
+
 ## 1.0.4
 
 ### Patch Changes
